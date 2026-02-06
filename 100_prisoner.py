@@ -7,3 +7,5 @@ def kSamplesWithNBoxes(k):
 
 [optimalDrawerSampling, randomDrawerSampling]
 
+lambda r: '{:.2%}'.format(r)
+
