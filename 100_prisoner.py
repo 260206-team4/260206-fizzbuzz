@@ -9,3 +9,12 @@ def kSamplesWithNBoxes(k):
 
 lambda r: '{:.2%}'.format(r)
 
+return lambda n: '\n\n' + fTable(
+    str(k) + ' tests of optimal vs random drawer-sampling'
+)(fName)(
+    lambda r: '{:.2%}'.format(r)
+)(
+    lambda f: sum(f(n) for x in tests) / k
+)([optimalDrawerSampling, randomDrawerSampling])
+
+
